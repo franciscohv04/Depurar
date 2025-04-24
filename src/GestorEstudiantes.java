@@ -7,10 +7,13 @@ public class GestorEstudiantes {
     // Calcula la nota media de un estudiante
     public static double calcularNotaMedia(Estudiante estudiante) {
         double suma = 0;
-        for (int i = 0; i < estudiante.getNotas().length; i++) { // Error: índice fuera de rango, el error está en el igual ya que el índice de los arrays empiezan por 0 por lo que siempre intenta contar una nota más
-            suma += estudiante.getNotas()[i];
+        if (estudiante.getNotas().length != 0) {
+            for (int i = 0; i < estudiante.getNotas().length; i++) { // Error: índice fuera de rango, Solución: el error está en el igual ya que el índice de los arrays empiezan por 0 por lo que siempre intenta contar una nota más
+                suma += estudiante.getNotas()[i];
+            }return suma / estudiante.getNotas().length; // Error si el array está vacío, Solución: he añadido una condición para si esta vacío el array devuelva como nota media 0
+        } else {
+            return 0;
         }
-        return suma / estudiante.getNotas().length; // Error si el array está vacío
     }
 
     // Encuentra al estudiante con la mejor nota media
