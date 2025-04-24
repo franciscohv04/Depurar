@@ -28,6 +28,7 @@ public class GestorEstudiantes {
                 mejor = estudiante;
             }
         }
+
         return mejor; // Error si la lista está vacía
     }
 
