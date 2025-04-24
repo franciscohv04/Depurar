@@ -18,7 +18,7 @@ public class Main {
         Estudiante[] estudiantes2 = new Estudiante[0];
         Estudiante estudiante = GestorEstudiantes.encontrarMejorEstudiante(estudiantes2);
         if (estudiante == null) { //He creado una condición para comprobar si la lista está vacia muestre por pantalla que la lista está vacia
-                                  //y si no lo está devuelva al mejor estudiante
+                                  //y si no lo está devuelva al mejor estudiante.
             System.out.println("No hay mejor estudiante ya que la lista está vacia");
         } else {
             System.out.println("Mejor estudiante: " + estudiante);
