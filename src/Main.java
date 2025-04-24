@@ -6,12 +6,16 @@ public class Main {
                 new Estudiante("Marta", 19, new double[]{9.5, 10.0}),
                 new Estudiante("Carlos", 21, new double[]{}) // Error: sin notas
         };
+        for (int i = 0; i < estudiantes.length; i++) { //Creo un bucle para recorrer el array de estudiantes y asi poder calcular la nota media de cada uno
+            double nota = GestorEstudiantes.calcularNotaMedia(estudiantes[i]); //Calculo la nota media del estudiante
+            System.out.println("Nota media del estudiante: " + estudiantes[i].getNombre() + " Nota media: " + nota);//Muestro el nombre y nota media del estudiante
+        }
 
-        System.out.println("Calculando el mejor estudiante...");
+        /*System.out.println("Calculando el mejor estudiante...");
         Estudiante mejor = GestorEstudiantes.encontrarMejorEstudiante(estudiantes);
         System.out.println("El mejor estudiante es: " + mejor.getNombre()); // Posible NullPointerException
 
         System.out.println("Guardando resultados...");
-        GestorEstudiantes.guardarResultados(estudiantes, "resultados.txt");
+        GestorEstudiantes.guardarResultados(estudiantes, "resultados.txt");*/
     }
 }
